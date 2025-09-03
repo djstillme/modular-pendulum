@@ -11,7 +11,7 @@ The equations of motions are found using Kane's method via the Sympy library. Th
 ## Installation
 
 All of the dependencies are provided in a conda environment, ensure that you have the conda-forge channel enabled, and conda channel_priority set to flexible
-before trying to install the environment or it may not generate correctly. You may also have to the libmamba solver enabled in your conda config.
+before trying to install the environment or it may not generate correctly. You may also need the libmamba solver enabled in your conda config.
 
 ```
 conda env create -f environment.yml
@@ -25,15 +25,44 @@ Run the Conda Environment:
 conda activate modp
 ```
 
-In `config.ini` you can find the customizable parameters.
-
 To generate the animation exectute the following in the `modp` conda environment:
 
 ```
 manim Animate.py Animate
 ```
 
-By default, manim generates an mp4 at 1080p at 60fps, if you want to change this you can add parameters to the previous command, See the [ManimCE API](https://docs.manim.community/en/stable/guides/configuration.html) for more details.
+By default, manim generates an mp4 at 1080p at 60fps, if you want to change this you can add parameters to the previous command, See the [ManimCE API](https://docs.manim.community/en/stable/guides/configuration.html) for more details. Keep in mind that whatever fps you set in `config.ini` should match what you execute the previous command with. For example if you want to render a 30 second animation at 144 fps in 1440p you would need to edit `duration` and `fps` in `config.ini` to be 30/144 respectively and then execute the following command:
+
+```
+manim Animate.py Animate --fps 144 -r 2560,1440
+```
+
+_Note: The amount of time it takes the animation to be produced is directly proportional to the number of frames generated (Duration X FPS), that said, expect it to take anywhere from a couple minutes up to an hour to be completed depending on how many frames you're trying to create._
+
+## Parameters
+
+The customizable parameters are located in `config.ini`
+
+| Parameter         | Description                                 | Data Type     | Example                      |
+|------------------|---------------------------------------------|---------------|------------------------------|
+| n                | number of masses                            | int           | 4                            |
+| b                | friction force                              | float         | 0.6                          |
+| theta            | initial angle                               | list[float]   | 40 0 20 120                  |
+| omega            | initial velocity                            | list[float]   | 4 2 1 0                      |
+| gravity          | strength of gravitational force             | float         | 9.81                         |
+| duration         | length of animation (in seconds)            | int           | 10                           |
+| fps              | number of frames per second                 | int           | 144                          |
+| lengths          | lengths of strings between masses           | list[float]   | 3 4 2 1                      |
+| masses           | masses of each pendulum                     | list[float]   | 1 2 3 4                      |
+| trails           | toggles trails behind masses                | bool          | true                         |
+| strings          | toggles whether strings are visible         | bool          | false                        |
+| ball_colors      | sets colors of masses                       | list[str]     | GREEN_E GOLD_B BLUE GREEN_E |
+| string_colors    | sets colors of strings                      | list[str]     | WHITE                        |
+| background_color | sets color of canvas                        | str           | BLACK                        |
+| trail_length     | length of trail if trails are enabled       | int           | 100                          |
+
+
+
 
 ## Gallery
 
