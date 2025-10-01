@@ -37,7 +37,8 @@ By default, manim generates an mp4 at 1080p at 60fps, if you want to change this
 manim Animate.py Animate --fps 144 -r 2560,1440
 ```
 
-_Note: The amount of time it takes the animation to be produced is directly proportional to the number of frames generated (Duration X FPS), that said, expect it to take anywhere from a couple minutes up to an hour to be completed depending on how many frames you're trying to create._
+> [!NOTE]
+>  _The amount of time it takes the animation to be produced is directly proportional to the number of frames generated (Duration X FPS), that said, expect it to take anywhere from a couple minutes up to an hour to be completed depending on how many frames you're trying to create._
 
 ## Parameters
 
