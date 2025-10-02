@@ -41,6 +41,8 @@ before trying to install the environment or it may not generate correctly — yo
 manim Animate.py Animate
 ```
 
+After the animation has finished rendering, the output will be placed into the `media` folder in the projects root directory.
+
 > [!IMPORTANT]
 > Make sure you run this command in the `modp` conda environment, or whatever virtualenv you are using to manage the dependencies.
 
