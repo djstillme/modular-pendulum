@@ -8,41 +8,54 @@ The equations of motions are found using Kane's method via the Sympy library. Th
 
 
 
-## Installation
+## 🪄 Installation
 
-All of the dependencies are provided in a conda environment, ensure that you have the conda-forge channel enabled, and conda channel_priority set to flexible
-before trying to install the environment or it may not generate correctly. You may also need the libmamba solver enabled in your conda config.
+### Prerequisites
 
+- Python version > 3.0.0
+- [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) package manager
+
+### 🐾 Step-by-Step Instructions
+
+1. **Clone this repository to your local machine**
+
+```
+git clone https://github.com/djstillme/modular-pendulum.git
+```
+
+2. **Resolve dependencies by executing the following in the project directory**
+   
 ```
 conda env create -f environment.yml
 ```
 
-## Usage
+> [!IMPORTANT]
+> Ensure that you have the [conda-forge](https://conda-forge.org/) channel enabled, and `conda channel_priority` set to **flexible**
+before trying to install the environment or it may not generate correctly — you may also need the [libmamba solver](https://conda.github.io/conda-libmamba-solver/user-guide/) enabled in your conda config.
 
-Run the Conda Environment:
+## 📦 Usage
 
-```
-conda activate modp
-```
-
-To generate the animation exectute the following in the `modp` conda environment:
+**Generate the animation using the following**
 
 ```
 manim Animate.py Animate
 ```
 
-By default, manim generates an mp4 at 1080p at 60fps, if you want to change this you can add parameters to the previous command, See the [ManimCE API](https://docs.manim.community/en/stable/guides/configuration.html) for more details. Keep in mind that whatever fps you set in `config.ini` should match what you execute the previous command with. For example if you want to render a 30 second animation at 144 fps in 1440p you would need to edit `duration` and `fps` in `config.ini` to be 30/144 respectively and then execute the following command:
+> [!IMPORTANT]
+> Make sure you run this command in the `modp` conda environment, or whatever virtualenv you are using to manage the dependencies.
+
+By default, manim generates an mp4 at 1080p at 60fps, if you want to change this — you can add parameters to the previous command, see the [ManimCE API](https://docs.manim.community/en/stable/guides/configuration.html) for more details. Keep in mind that whatever fps you set in `config.ini` should match what you execute the previous command with. For example if you want to render a 30 second animation at 144fps in 1440p you would need to edit **duration** and **fps** in `config.ini` to be 30/144 respectively and then execute the following command:
 
 ```
 manim Animate.py Animate --fps 144 -r 2560,1440
 ```
 
 > [!NOTE]
->  _The amount of time it takes the animation to be produced is directly proportional to the number of frames generated (Duration X FPS), that said, expect it to take anywhere from a couple minutes up to an hour to be completed depending on how many frames you're trying to create._
+> The rendering time for the animation increases with the number of frames (`duration` × `fps`). Depending on these factors and your hardware’s performance, it may take anywhere from a few minutes to several hours to be fully completed.
 
-## Parameters
+### 🔧 Parameters
 
-The customizable parameters are located in `config.ini`
+The customizable parameters are located in `config.ini`, and should be formatted as seen below in the **Example** column. A list of predefined colors can be found in the Manim documentation [here](https://docs.manim.community/en/stable/reference/manim.utils.color.manim_colors.html).
 
 | Parameter         | Description                                 | Data Type     | Example                      |
 |------------------|---------------------------------------------|---------------|------------------------------|
@@ -65,7 +78,7 @@ The customizable parameters are located in `config.ini`
 
 
 
-## Gallery
+## 🎨 Gallery
 
 ![2](https://github.com/user-attachments/assets/9d2aa6a6-2337-4fc0-b2a4-e289a18a172a)
 
