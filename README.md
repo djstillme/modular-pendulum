@@ -79,15 +79,6 @@ The customizable parameters are located in `config.ini`, and should be formatted
 | background_color | sets color of canvas                        | str           | BLACK                        |
 | trail_length     | length of trail if trails are enabled       | int           | 100                          |
 
-
-
-
-## 🎨 Gallery
-
-![2](https://github.com/user-attachments/assets/9d2aa6a6-2337-4fc0-b2a4-e289a18a172a)
-
-![3](https://github.com/user-attachments/assets/61d2abcc-06cc-45fb-bc39-570da067d8e6)
-
 ## References and Further Reading
 
 [1] *T. Kane  and D.  Levinson. (1985). "Dynamics, theory  and applications."*
