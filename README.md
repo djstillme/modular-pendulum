@@ -3,12 +3,11 @@
 Python script used to create n-body pendulum simulations in any media format supported by the [Manim](https://www.manim.community/) library (mp4, gif, etc).
 The equations of motions are found using Kane's method via the [Sympy](https://www.sympy.org) library. The Integration is done using [Scipy](https://scipy.org/) and the animation is done in ManimCE.
 
-
 | Trails + No Strings          | No Trails + No Strings          |
 |:----------------------------|:-------------------------------|
-| <img width="320" height="180" alt="image" src="gifs/1.gif" /> | <img width="320" height="180" alt="image" src="gifs/2.gif" /> |
+| <img width="400" height="225" alt="image" src="gifs/1.gif" /> | <img width="400" height="225" alt="image" src="gifs/2.gif" /> |
 | **Trails + Strings**         | **No Trails + Strings**         |
-| <img width="320" height="180" alt="image" src="gifs/3.gif" /> | <img width="320" height="180" alt="image" src="gifs/4.gif" /> |
+| <img width="400" height="225" alt="image" src="gifs/3.gif" /> | <img width="400" height="225" alt="image" src="gifs/4.gif" /> |
 
 
 ## 🪄 Installation
